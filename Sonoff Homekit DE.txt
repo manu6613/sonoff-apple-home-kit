@@ -1,0 +1,50 @@
+Sonoff Homekit
+
+Diese Firmware macht den Sonoff WIFI Smart Switch kompatibel mit Apples Homekit!
+    
+Homekit runs on the Sonoff! 
+
+Im Gegensatz zu anderen Projekten auf GitHub benötigt diese Firmware nichts anderes um zu funktionieren. 
+Es basiert nicht auf die Tasmota Fw, Sie brauchen keinen HomeBridge der mit einem Raspberry-Pi läuft oder einem MQTT-Server, 
+da HomeKit nativ ausgeführt wird, reicht eine WLAN-Verbindung und ein Apple-Gerät!
+Bei der Implementierung wurden von Apple bereitgestellte Spezifikationen für Entwickler verwendet, 
+sodass es sich um eine stabile und unterstützte Software handelt, die noch lange funktioniert.
+Jetzt können Sie endlich ein HomeKit-Gerät haben, ohne viel Geld auszugeben! 
+
+Kompatible Geräte
+
+Getestet wurden bis jetzt: Sonoff Basic, Sonoff Slampher, Sonoff S26, Sonoff S20
+
+________________________________________
+
+Installations-Anleitung
+
+
+Den Sonoff flashen
+
+1.	Den Sonoff vom Stromnetz trennen!
+2.	Den Sonoff mit dem Seriellen Adapter verbinden @ 3.3v
+3.	Ich Benutze das ESPTOOL
+4.	Ich Speicher immer erstens die Firmware ab, man kann nie wissen.
+5.	1. Befehl ausführen:
+6.	esptool.py --port COM3 erase_flash	(erase flas)
+7.	2. Befehl ausführen:
+8.	esptool.py -p /COM3 --baud 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 Sonoff_OFF.bin
+9.	Fertig!
+
+
+Den Sonoff zur Home-app hinzufügen
+
+1.	Iphone oder Ipad mit dem W-Lan Netwerk „Sonoff Switch-xxx“ verbinden
+2.	Es öffnet sich der Browser, dort klickt ihr auf euer W-Lan
+3.	Das Passwort eintippen
+4.	Home-App öffnen
+5.	Auf das + Symbol klicken
+6.	Auf „ich habe keinen Code“ klicken…
+7.	Den gefundenen Sonoff anklicken
+8.	Das Passwort einfügen:
+9.	11111111
+
+
+Fertig, viel spass!
+
