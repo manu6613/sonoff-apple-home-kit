@@ -16,6 +16,28 @@ Getestet wurden bis jetzt: Sonoff Basic, Sonoff Slampher, Sonoff S26, Sonoff S20
 
 ________________________________________
 
+Neue Funktionen
+
+Web Page Controller
+
+Um den Sonoff vom Browser aus zu steuern, einfach die Ip-Adresse des Sonoff im Browser (mittels Ip-Scanner suchen) eingeben, 
+und mit folgenden Befehlen lässt er sich steuern: (auch für Loxone geeignet) ?? 
+
+Befehle:
+
+•	192.168.88.67/?set=off
+•	192.168.88.67/?set=on
+•	192.168.88.67/?set=toggle
+•	192.168.88.67/?set=state
+
+Alle Befehle sind in GET und beziehen sich auf die IP-Adresse des Sonoff. 
+
+Um den Sonoff bei IP 192.168.88.67 einzuschalten, folgendes eintippen: http://192.168.88.67/?set=on
+
+
+________________________________________
+
+
 Installations-Anleitung
 
 Den Sonoff flashen
